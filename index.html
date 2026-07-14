@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Karriere bei sted cnc-fertigung gmbh | CNC-Fräser (m/w/d)</title>
-<meta name="description" content="Werde Teil des sted-Teams in Heroldstatt. Wir suchen CNC-Fräser (m/w/d) für 3/5-Achsen-Bearbeitung. Jetzt online bewerben!">
+<meta name="description" content="Wir suchen CNC-Fräser (m/w/d) für 3- und 5-Achs-Bearbeitung in Heroldstatt. Jetzt online bewerben bei der sted cnc-fertigung gmbh.">
 <link rel="icon" href="logo-7.png">
 <style>
   :root{
@@ -19,9 +19,9 @@
     --card:#ffffff;
     --ok:#1a9f5f;
     --err:#d64545;
-    --radius:16px;
-    --shadow:0 10px 30px rgba(18,41,74,.08);
-    --shadow-lg:0 24px 60px rgba(18,41,74,.16);
+    --radius:14px;
+    --shadow:0 8px 24px rgba(18,41,74,.07);
+    --shadow-lg:0 20px 48px rgba(18,41,74,.14);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -36,172 +36,185 @@
   a:hover{text-decoration:underline}
   .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
   .btn{
-    display:inline-flex;align-items:center;gap:.55rem;
+    display:inline-flex;align-items:center;gap:.5rem;
     font-size:1rem;font-weight:700;letter-spacing:.2px;
-    padding:.95rem 1.7rem;border-radius:999px;border:0;cursor:pointer;
-    transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
+    padding:.9rem 1.7rem;border-radius:8px;border:0;cursor:pointer;
+    transition:background .15s ease,box-shadow .15s ease;
   }
-  .btn-primary{background:var(--cyan);color:#fff;box-shadow:0 8px 20px rgba(23,169,221,.35)}
-  .btn-primary:hover{background:var(--cyan-dark);transform:translateY(-2px);text-decoration:none}
-  .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.55)}
-  .btn-ghost:hover{background:rgba(255,255,255,.22);text-decoration:none}
+  .btn-primary{background:var(--cyan);color:#fff}
+  .btn-primary:hover{background:var(--cyan-dark);text-decoration:none}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);text-decoration:none}
+
+  /* ---------- Image placeholder ---------- */
+  .img-ph{
+    position:relative;width:100%;height:100%;
+    background:
+      repeating-linear-gradient(45deg,rgba(26,58,99,.03) 0 12px,transparent 12px 24px),
+      #e7eef6;
+    border:1.5px dashed #b6c6da;border-radius:var(--radius);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;
+    color:#7d90a6;text-align:center;padding:26px;min-height:180px;
+  }
+  .img-ph svg{width:34px;height:34px;stroke:#9fb1c6;fill:none;stroke-width:1.6}
+  .img-ph .lab{font-weight:700;color:#5f7488;font-size:.9rem}
+  .img-ph .sub{font-size:.8rem;color:#93a4b8}
 
   /* ---------- Header ---------- */
   header.topbar{
     position:sticky;top:0;z-index:50;
-    background:rgba(255,255,255,.92);
+    background:rgba(255,255,255,.94);
     backdrop-filter:saturate(180%) blur(10px);
     border-bottom:1px solid var(--line);
   }
-  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
-  .brand img{height:44px;display:block}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand img{height:42px;display:block}
   .nav{display:flex;gap:1.6rem;align-items:center}
-  .nav a{color:var(--navy);font-weight:600;font-size:.97rem}
+  .nav a{color:var(--navy);font-weight:600;font-size:.96rem}
   .nav a:hover{color:var(--cyan-dark);text-decoration:none}
-  .nav .btn{padding:.6rem 1.15rem;font-size:.92rem}
-  .menu-toggle{display:none;background:none;border:0;cursor:pointer}
+  .nav .btn{padding:.58rem 1.15rem;font-size:.9rem}
 
   /* ---------- Hero ---------- */
   .hero{
-    position:relative;overflow:hidden;
-    background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,#1d4d82 100%);
+    background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,#1d4d82 100%);
     color:#fff;
   }
-  .hero::after{
-    content:"";position:absolute;right:-140px;top:-120px;width:520px;height:520px;
-    background:radial-gradient(circle,rgba(23,169,221,.45),transparent 62%);
-    filter:blur(10px);pointer-events:none;
-  }
-  .hero .wrap{position:relative;z-index:2;padding:76px 22px 88px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .hero .wrap{padding:70px 22px 74px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
   .eyebrow{
-    display:inline-flex;align-items:center;gap:.5rem;
-    background:rgba(23,169,221,.18);border:1px solid rgba(23,169,221,.5);
-    color:#9fe0f7;font-weight:700;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;
-    padding:.4rem .9rem;border-radius:999px;margin-bottom:1.3rem;
+    display:inline-block;color:#9fe0f7;font-weight:700;font-size:.8rem;
+    letter-spacing:1.6px;text-transform:uppercase;margin-bottom:1.2rem;
   }
-  .hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.08;font-weight:800;letter-spacing:-.5px}
+  .hero h1{font-size:clamp(2rem,4.4vw,3.15rem);line-height:1.1;font-weight:800;letter-spacing:-.5px}
   .hero h1 .hl{color:var(--cyan);display:block}
-  .hero p.lead{margin-top:1.2rem;font-size:1.12rem;color:#cdd8e6;max-width:34rem}
-  .hero-cta{margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap}
-  .hero-card{
-    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
-    border-radius:var(--radius);padding:26px 28px;backdrop-filter:blur(6px);
-  }
-  .hero-card h3{font-size:.82rem;letter-spacing:1.4px;text-transform:uppercase;color:#9fe0f7;margin-bottom:1rem}
-  .fact{display:flex;gap:.85rem;padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
-  .fact:last-child{border-bottom:0}
-  .fact .ic{flex:0 0 auto;width:26px;text-align:center;color:var(--cyan)}
-  .fact b{color:#fff;font-weight:700}
-  .fact span{color:#c5d2e2;font-size:.95rem}
+  .hero p.lead{margin-top:1.15rem;font-size:1.1rem;color:#cdd8e6;max-width:33rem}
+  .hero-cta{margin-top:1.9rem;display:flex;gap:1rem;flex-wrap:wrap}
+  .hero-img{aspect-ratio:4/3}
+  .hero-img .img-ph{background:
+      repeating-linear-gradient(45deg,rgba(255,255,255,.04) 0 12px,transparent 12px 24px),
+      rgba(255,255,255,.06);
+    border-color:rgba(255,255,255,.3);color:#bcd0e6}
+  .hero-img .img-ph svg{stroke:rgba(255,255,255,.6)}
+  .hero-img .img-ph .lab{color:#dbe7f4}
+  .hero-img .img-ph .sub{color:#a9c0da}
+
+  /* ---------- Facts bar ---------- */
+  .facts{background:#fff;border-bottom:1px solid var(--line)}
+  .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .fact{padding:24px 26px;border-left:1px solid var(--line)}
+  .fact:first-child{border-left:0;padding-left:0}
+  .fact .k{font-size:.75rem;letter-spacing:1px;text-transform:uppercase;color:var(--cyan-dark);font-weight:700}
+  .fact .v{margin-top:.3rem;color:var(--navy);font-weight:600;font-size:.98rem}
 
   /* ---------- Sections ---------- */
-  section{padding:72px 0}
-  .section-head{max-width:44rem;margin-bottom:2.6rem}
-  .section-head .kicker{color:var(--cyan-dark);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:.8rem}
-  .section-head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);color:var(--navy);margin-top:.5rem;letter-spacing:-.4px}
+  section{padding:66px 0}
+  .section-head{max-width:44rem;margin-bottom:2.4rem}
+  .section-head .kicker{color:var(--cyan-dark);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:.78rem}
+  .section-head h2{font-size:clamp(1.6rem,3.1vw,2.3rem);color:var(--navy);margin-top:.5rem;letter-spacing:-.4px}
   .section-head p{color:var(--muted);margin-top:.7rem;font-size:1.05rem}
 
-  .grid{display:grid;gap:22px}
-  .grid-3{grid-template-columns:repeat(3,1fr)}
-  .grid-2{grid-template-columns:1fr 1fr}
-  .card{
-    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-    padding:28px;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease;
-  }
-  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-  .card .emoji{font-size:1.7rem;display:inline-grid;place-items:center;width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#eaf6fc,#dcefff);margin-bottom:1rem}
-  .card h3{color:var(--navy);font-size:1.18rem;margin-bottom:.5rem}
-  .card p{color:var(--muted)}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .split .txt p{color:var(--muted);margin-top:1rem}
+  .split-img{aspect-ratio:4/3}
 
-  ul.ticks{list-style:none;display:grid;gap:.7rem}
-  ul.ticks li{position:relative;padding-left:2rem;color:#33414f}
+  /* ---------- Gallery ---------- */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .gallery .cell{aspect-ratio:4/3}
+
+  ul.ticks{list-style:none;display:grid;gap:.75rem}
+  ul.ticks li{position:relative;padding-left:1.9rem;color:#33414f}
   ul.ticks li::before{
-    content:"✓";position:absolute;left:0;top:0;
-    width:1.4rem;height:1.4rem;border-radius:50%;
-    background:var(--cyan);color:#fff;font-size:.8rem;font-weight:800;
-    display:grid;place-items:center;
+    content:"";position:absolute;left:0;top:.55rem;
+    width:9px;height:9px;border-radius:2px;background:var(--cyan);
   }
 
   /* ---------- Job block ---------- */
   #stelle{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .job-top{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
     background:linear-gradient(135deg,var(--navy),#1d4d82);color:#fff;border-radius:var(--radius);
-    padding:30px 32px;box-shadow:var(--shadow)}
-  .job-top h2{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.3px}
+    padding:30px 32px}
+  .job-top h2{font-size:clamp(1.5rem,2.9vw,2.1rem);letter-spacing:-.3px}
   .job-top .sub{color:#bcd0e6;margin-top:.35rem}
   .tags{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.9rem}
-  .tag{background:rgba(23,169,221,.22);border:1px solid rgba(23,169,221,.55);color:#dff3fc;
-    font-size:.82rem;font-weight:700;padding:.32rem .8rem;border-radius:999px}
-  .job-body{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:34px}
-  .job-body h3{color:var(--navy);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
-  .job-body h3 .b{width:8px;height:22px;border-radius:3px;background:var(--cyan);display:inline-block}
+  .tag{background:rgba(23,169,221,.2);border:1px solid rgba(23,169,221,.5);color:#dff3fc;
+    font-size:.8rem;font-weight:700;padding:.3rem .8rem;border-radius:6px}
+  .job-body{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:34px}
+  .job-body h3{color:var(--navy);font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+  .job-body h3 .b{width:6px;height:20px;border-radius:2px;background:var(--cyan);display:inline-block}
+  .note{margin-top:32px;background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--cyan);
+    border-radius:8px;padding:20px 24px;color:#33414f}
+  .note b{color:var(--navy)}
 
-  .controls-note{margin-top:34px;background:var(--bg);border:1px dashed #c4d2e2;border-radius:var(--radius);
-    padding:22px 26px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-  .controls-note .ic{font-size:1.8rem}
-  .controls-note b{color:var(--navy)}
+  /* ---------- Offer ---------- */
+  #vorteile .split-img{order:2}
 
   /* ---------- Form ---------- */
   #bewerben{background:linear-gradient(180deg,#eef4fb,#f4f7fb)}
-  .form-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);background:#fff}
+  .form-shell{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);background:#fff}
   .form-aside{background:linear-gradient(155deg,var(--navy-dark),var(--navy));color:#fff;padding:44px 40px}
-  .form-aside h2{font-size:1.7rem;line-height:1.15;letter-spacing:-.3px}
+  .form-aside h2{font-size:1.55rem;line-height:1.2;letter-spacing:-.3px}
   .form-aside p{color:#c5d2e2;margin-top:1rem}
   .steps{margin-top:2rem;display:grid;gap:1.1rem}
   .step{display:flex;gap:.9rem;align-items:flex-start}
-  .step .n{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--cyan);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.9rem}
+  .step .n{flex:0 0 auto;width:28px;height:28px;border-radius:6px;background:var(--cyan);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.85rem}
   .step b{display:block;color:#fff}
   .step span{color:#bacbdd;font-size:.92rem}
-  .aside-contact{margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.15);font-size:.95rem;color:#c5d2e2}
+  .aside-contact{margin-top:2.2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);font-size:.95rem;color:#c5d2e2}
   .aside-contact a{color:#9fe0f7}
 
   .form-main{padding:44px 40px}
-  .field{margin-bottom:1.15rem}
-  .field label{display:block;font-weight:600;color:var(--navy);margin-bottom:.4rem;font-size:.95rem}
+  .field{margin-bottom:1.1rem}
+  .field label{display:block;font-weight:600;color:var(--navy);margin-bottom:.4rem;font-size:.94rem}
   .field label .req{color:var(--err)}
   .field input,.field select,.field textarea{
-    width:100%;padding:.8rem .95rem;font-size:1rem;font-family:inherit;color:var(--ink);
-    border:1.5px solid var(--line);border-radius:11px;background:#fff;transition:border .15s,box-shadow .15s;
+    width:100%;padding:.78rem .95rem;font-size:1rem;font-family:inherit;color:var(--ink);
+    border:1.5px solid var(--line);border-radius:9px;background:#fff;transition:border .15s,box-shadow .15s;
   }
   .field input:focus,.field select:focus,.field textarea:focus{
     outline:0;border-color:var(--cyan);box-shadow:0 0 0 4px rgba(23,169,221,.14)
   }
-  .field textarea{resize:vertical;min-height:110px}
-  .field .hint{font-size:.82rem;color:var(--muted);margin-top:.35rem}
+  .field textarea{resize:vertical;min-height:104px}
   .field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--err);box-shadow:0 0 0 4px rgba(214,69,69,.12)}
   .field .error-msg{color:var(--err);font-size:.82rem;margin-top:.35rem;display:none}
   .field.invalid .error-msg{display:block}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-  .check{display:flex;gap:.7rem;align-items:flex-start;margin:.4rem 0 1.2rem}
-  .check input{width:auto;margin-top:.25rem;flex:0 0 auto;accent-color:var(--cyan);transform:scale(1.2)}
-  .check label{font-weight:400;color:var(--muted);font-size:.9rem}
-  .form-submit{width:100%;justify-content:center;font-size:1.05rem;margin-top:.4rem}
+  .fieldset-title{font-weight:700;color:var(--navy);font-size:.94rem;margin:.4rem 0 .7rem}
+  .check{display:flex;gap:.7rem;align-items:flex-start;margin:.55rem 0}
+  .check input{width:auto;margin-top:.2rem;flex:0 0 auto;accent-color:var(--cyan);transform:scale(1.15)}
+  .check label{font-weight:400;color:#33414f;font-size:.92rem}
+  .divider{height:1px;background:var(--line);margin:1.4rem 0}
+  .form-submit{width:100%;justify-content:center;font-size:1.05rem;margin-top:.5rem}
   .form-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:1rem}
 
   .success{display:none;text-align:center;padding:30px 10px}
-  .success .badge{width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--ok),#26c07a);color:#fff;display:grid;place-items:center;font-size:2.2rem;margin:0 auto 1.2rem;box-shadow:0 12px 30px rgba(26,159,95,.35)}
-  .success h3{color:var(--navy);font-size:1.5rem;margin-bottom:.6rem}
-  .success p{color:var(--muted);max-width:26rem;margin:0 auto 1.4rem}
+  .success .badge{width:70px;height:70px;border-radius:12px;background:var(--ok);color:#fff;display:grid;place-items:center;margin:0 auto 1.2rem}
+  .success .badge svg{width:34px;height:34px;stroke:#fff;stroke-width:2.4;fill:none}
+  .success h3{color:var(--navy);font-size:1.4rem;margin-bottom:.6rem}
+  .success p{color:var(--muted);max-width:27rem;margin:0 auto 1.4rem}
   body.sent .form-fields{display:none}
   body.sent .success{display:block}
 
   /* ---------- Footer ---------- */
-  footer{background:var(--navy-dark);color:#c5d2e2;padding:56px 0 30px}
+  footer{background:var(--navy-dark);color:#c5d2e2;padding:52px 0 28px}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;align-items:start}
-  footer img{height:42px;filter:brightness(0) invert(1);opacity:.95}
-  footer h4{color:#fff;font-size:.85rem;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:1rem}
+  footer img{height:40px;filter:brightness(0) invert(1);opacity:.95}
+  footer h4{color:#fff;font-size:.82rem;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:1rem}
   footer p,footer a{color:#a9bace;font-size:.95rem}
   footer a:hover{color:#fff}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:20px;
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:34px;padding-top:20px;
     display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem;color:#7e93aa}
-  .foot-bottom a{color:#7e93aa}
 
   /* ---------- Responsive ---------- */
   @media(max-width:900px){
-    .hero .wrap{grid-template-columns:1fr;gap:34px;padding:56px 22px 64px}
-    .grid-3{grid-template-columns:1fr}
-    .grid-2{grid-template-columns:1fr}
-    .job-body{grid-template-columns:1fr}
+    .hero .wrap{grid-template-columns:1fr;gap:34px;padding:52px 22px 58px}
+    .hero-img{order:-1;aspect-ratio:16/9}
+    .facts .wrap{grid-template-columns:1fr 1fr}
+    .fact{border-left:0;border-top:1px solid var(--line);padding:20px 0}
+    .fact:first-child,.fact:nth-child(2){border-top:0}
+    .fact:nth-child(odd){padding-right:20px}
+    .split{grid-template-columns:1fr;gap:26px}
+    #vorteile .split-img{order:-1}
+    .gallery{grid-template-columns:1fr}
+    .job-body{grid-template-columns:1fr;gap:32px}
     .form-shell{grid-template-columns:1fr}
     .foot-grid{grid-template-columns:1fr;gap:26px}
     .nav a:not(.btn){display:none}
@@ -210,6 +223,9 @@
     .row2{grid-template-columns:1fr}
     .form-main,.form-aside{padding:32px 24px}
     .job-top{padding:24px}
+    .facts .wrap{grid-template-columns:1fr}
+    .fact{border-top:1px solid var(--line);padding:18px 0}
+    .fact:nth-child(2){border-top:1px solid var(--line)}
   }
 </style>
 </head>
@@ -221,8 +237,8 @@
     <a class="brand" href="#top"><img src="logo-7.png" alt="sted cnc-fertigung gmbh"></a>
     <nav class="nav">
       <a href="#ueber-uns">Über uns</a>
-      <a href="#stelle">Stelle</a>
-      <a href="#vorteile">Warum sted</a>
+      <a href="#stelle">Die Stelle</a>
+      <a href="#vorteile">Wir bieten</a>
       <a class="btn btn-primary" href="#bewerben">Jetzt bewerben</a>
     </nav>
   </div>
@@ -232,47 +248,52 @@
 <section class="hero" id="top">
   <div class="wrap">
     <div>
-      <span class="eyebrow">● Wir stellen ein</span>
-      <h1>Wir suchen Dich als<span class="hl">CNC-Fräser (m/w/d)</span></h1>
-      <p class="lead">Für span(n)ende Aufgaben an modernen 3- und 5-Achs-Maschinen. Werde Teil eines eingespielten Teams in der Präzisionsfertigung – bei sted in Heroldstatt.</p>
+      <span class="eyebrow">Karriere bei sted · Heroldstatt</span>
+      <h1>Wir suchen Verstärkung als<span class="hl">CNC-Fräser (m/w/d)</span></h1>
+      <p class="lead">Für die Zerspanung an modernen 3- und 5-Achs-Fräsmaschinen. Werde Teil unseres Teams in der Präzisionsfertigung und arbeite eigenverantwortlich an anspruchsvollen Bauteilen.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#bewerben">In 2 Minuten bewerben →</a>
+        <a class="btn btn-primary" href="#bewerben">Jetzt bewerben</a>
         <a class="btn btn-ghost" href="#stelle">Stelle ansehen</a>
       </div>
     </div>
-    <div class="hero-card">
-      <h3>Auf einen Blick</h3>
-      <div class="fact"><span class="ic">🛠️</span><span><b>Position:</b> CNC-Fräser/in (3/5-Achsen)</span></div>
-      <div class="fact"><span class="ic">⚙️</span><span><b>Steuerungen:</b> Heidenhain TNC 430/530 &amp; Mazatrol</span></div>
-      <div class="fact"><span class="ic">📍</span><span><b>Standort:</b> Siemensstraße 11, 72535 Heroldstatt</span></div>
-      <div class="fact"><span class="ic">🕒</span><span><b>Umfang:</b> Vollzeit &amp; unbefristet</span></div>
+    <div class="hero-img">
+      <div class="img-ph">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><circle cx="8.5" cy="9" r="1.6"/><path d="M21 15l-5-4-6 5"/></svg>
+        <span class="lab">Bildplatz: Werkstatt / Maschinenpark</span>
+        <span class="sub">Hier ein Foto der Fertigung einfügen (ca. 4:3)</span>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- Facts -->
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><div class="k">Position</div><div class="v">CNC-Fräser/in (3/5-Achsen)</div></div>
+    <div class="fact"><div class="k">Steuerungen</div><div class="v">Heidenhain TNC 430/530 &amp; Mazatrol</div></div>
+    <div class="fact"><div class="k">Arbeitszeit</div><div class="v">Vollzeit · Früh-/Spätschicht</div></div>
+    <div class="fact"><div class="k">Standort</div><div class="v">72535 Heroldstatt</div></div>
+  </div>
+</div>
+
 <!-- Über uns -->
 <section id="ueber-uns">
   <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">fits together …</div>
-      <h2>Präzision, die zusammenpasst</h2>
-      <p>Die sted cnc-fertigung gmbh steht für hochwertige Zerspanung und termingerechte Lieferung. Damit das so bleibt, verstärken wir unser Team mit engagierten Fachkräften, die ihr Handwerk lieben.</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="card">
-        <div class="emoji">🎯</div>
-        <h3>Hohe Fertigungstiefe</h3>
-        <p>Anspruchsvolle Einzelteile und Serien für Kunden aus unterschiedlichsten Branchen – kein Tag ist wie der andere.</p>
+    <div class="split">
+      <div class="txt">
+        <div class="section-head" style="margin-bottom:0">
+          <div class="kicker">Über uns</div>
+          <h2>Präzision, die zusammenpasst</h2>
+          <p>Die sted cnc-fertigung gmbh fertigt hochwertige Dreh- und Frästeile für Kunden aus unterschiedlichen Branchen. Damit wir unsere Kunden auch in Zukunft termingerecht beliefern können, suchen wir zuverlässige Fachkräfte, die ihr Handwerk beherrschen.</p>
+          <p>Bei uns erwarten Dich ein moderner Maschinenpark, ein eingespieltes Team und kurze Entscheidungswege.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="emoji">🤝</div>
-        <h3>Starkes Team</h3>
-        <p>Flache Hierarchien, kurze Wege und Kollegen, die sich gegenseitig unterstützen. „fits together" leben wir.</p>
-      </div>
-      <div class="card">
-        <div class="emoji">🚀</div>
-        <h3>Moderner Maschinenpark</h3>
-        <p>Du arbeitest an gut ausgestatteten Anlagen mit Heidenhain- und Mazatrol-Steuerungen.</p>
+      <div class="split-img">
+        <div class="img-ph">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><circle cx="8.5" cy="9" r="1.6"/><path d="M21 15l-5-4-6 5"/></svg>
+          <span class="lab">Bildplatz: Firmengebäude / Team</span>
+          <span class="sub">z. B. Außenaufnahme oder Kollegen an der Maschine</span>
+        </div>
       </div>
     </div>
   </div>
@@ -284,62 +305,95 @@
     <div class="job-top">
       <div>
         <h2>CNC-Fräser/in (3/5-Achsen)</h2>
-        <div class="sub">Fachkraft für span(n)ende Aufgaben · Vollzeit · Heroldstatt</div>
+        <div class="sub">Fachkraft für die Zerspanung · Vollzeit · Heroldstatt</div>
         <div class="tags">
-          <span class="tag">3- & 5-Achs-Fräsen</span>
+          <span class="tag">3- &amp; 5-Achs-Fräsen</span>
+          <span class="tag">Programmierung</span>
           <span class="tag">Heidenhain TNC 430/530</span>
           <span class="tag">Mazatrol</span>
-          <span class="tag">Unbefristet</span>
+          <span class="tag">Schichtbetrieb</span>
         </div>
       </div>
-      <a class="btn btn-primary" href="#bewerben">Jetzt bewerben →</a>
+      <a class="btn btn-primary" href="#bewerben">Jetzt bewerben</a>
     </div>
 
     <div class="job-body">
       <div>
         <h3><span class="b"></span>Deine Aufgaben</h3>
         <ul class="ticks">
-          <li>Selbstständiges Einrichten, Rüsten und Bedienen unserer CNC-Fräsmaschinen (3/5-Achsen)</li>
-          <li>Programmierung und Optimierung an Heidenhain TNC 430/530 sowie Mazatrol</li>
-          <li>Fertigung von Präzisionsteilen nach Zeichnung und Vorgabe</li>
-          <li>Kontrolle der Werkstücke und Sicherstellung unserer Qualitätsstandards</li>
-          <li>Werkzeug- und Prozessüberwachung im laufenden Betrieb</li>
+          <li>Einrichten, Rüsten und Bedienen unserer 3- und 5-Achs-Fräsmaschinen</li>
+          <li>Erstellen, Anpassen und Optimieren von CNC-Programmen</li>
+          <li>Selbstständige Fertigung von Präzisionsteilen nach Zeichnung</li>
+          <li>Eigenverantwortliche Kontrolle der Werkstücke und Prozesse</li>
+          <li>Mitarbeit im Früh- und Spätschichtbetrieb</li>
         </ul>
       </div>
       <div>
         <h3><span class="b"></span>Dein Profil</h3>
         <ul class="ticks">
-          <li>Abgeschlossene Ausbildung als Zerspanungsmechaniker/in oder vergleichbare Qualifikation</li>
-          <li>Erfahrung im CNC-Fräsen, idealerweise 3- und 5-Achs-Bearbeitung</li>
-          <li>Kenntnisse in Heidenhain- und/oder Mazatrol-Steuerungen von Vorteil</li>
-          <li>Sicheres Lesen technischer Zeichnungen</li>
-          <li>Sorgfältige, zuverlässige und teamorientierte Arbeitsweise</li>
+          <li>Erfahrung an 3- und 5-Achs-Fräsmaschinen</li>
+          <li>Programmierkenntnisse (Heidenhain TNC 430/530 und/oder Mazatrol)</li>
+          <li>Selbstständige Arbeitsweise, Verantwortungsbewusstsein und Eigeninitiative</li>
+          <li>Bereitschaft zur Arbeit in Früh- und Spätschicht</li>
+          <li>Gute Deutschkenntnisse für die Kommunikation im Team</li>
+          <li>Führerschein (Klasse B)</li>
         </ul>
       </div>
     </div>
 
-    <div class="controls-note">
-      <span class="ic">💡</span>
-      <div><b>Auch als Quereinsteiger willkommen:</b> Du bringst Motivation und handwerkliches Geschick mit, aber noch nicht alle Steuerungen drauf? Wir arbeiten Dich ein.</div>
+    <div class="note">
+      <b>Kein Profi an allen Steuerungen?</b> Wenn Du das Handwerk beherrschst und motiviert bist, arbeiten wir Dich in unsere Steuerungen und Abläufe ein.
     </div>
   </div>
 </section>
 
-<!-- Vorteile -->
+<!-- Wir bieten -->
 <section id="vorteile">
   <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Warum sted</div>
-      <h2>Das bieten wir Dir</h2>
-      <p>Ein sicherer Arbeitsplatz in einer zukunftsstarken Branche – mit dem Drumherum, das stimmt.</p>
+    <div class="split">
+      <div class="split-img">
+        <div class="img-ph">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><circle cx="8.5" cy="9" r="1.6"/><path d="M21 15l-5-4-6 5"/></svg>
+          <span class="lab">Bildplatz: Arbeitsplatz / Bauteile</span>
+          <span class="sub">z. B. gefertigte Präzisionsteile</span>
+        </div>
+      </div>
+      <div class="txt">
+        <div class="section-head" style="margin-bottom:1.4rem">
+          <div class="kicker">Wir bieten</div>
+          <h2>Das erwartet Dich bei uns</h2>
+        </div>
+        <ul class="ticks">
+          <li>Unbefristete Festanstellung in einem gesunden Unternehmen</li>
+          <li>Leistungsgerechte Bezahlung und pünktliches Gehalt</li>
+          <li>Moderner Maschinenpark und ordentlich ausgestattete Arbeitsplätze</li>
+          <li>Einarbeitung und Weiterbildung an unseren Steuerungen</li>
+          <li>Verantwortung und Freiraum für eigenständiges Arbeiten</li>
+          <li>Ein kollegiales Team mit kurzen Wegen</li>
+        </ul>
+      </div>
     </div>
-    <div class="grid grid-3">
-      <div class="card"><div class="emoji">🔒</div><h3>Sicherer Job</h3><p>Unbefristete Festanstellung in einem gesunden, wachsenden Unternehmen.</p></div>
-      <div class="card"><div class="emoji">💶</div><h3>Faire Vergütung</h3><p>Leistungsgerechte Bezahlung und pünktliches Gehalt – auf das Du Dich verlassen kannst.</p></div>
-      <div class="card"><div class="emoji">📈</div><h3>Weiterbildung</h3><p>Einarbeitung, Schulungen und Entwicklungsmöglichkeiten an modernen Steuerungen.</p></div>
-      <div class="card"><div class="emoji">⏱️</div><h3>Geregelte Zeiten</h3><p>Planbare Arbeitszeiten, damit Beruf und Privatleben zusammenpassen.</p></div>
-      <div class="card"><div class="emoji">🧰</div><h3>Top-Ausstattung</h3><p>Moderner Maschinenpark und ordentliche Arbeitsplätze.</p></div>
-      <div class="card"><div class="emoji">👋</div><h3>Familiäres Klima</h3><p>Ein Team, das zusammenhält – vom ersten Tag an.</p></div>
+  </div>
+</section>
+
+<!-- Einblicke -->
+<section id="einblicke" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Einblicke</div>
+      <h2>Bei sted arbeiten</h2>
+      <p>Platzhalter für Impressionen aus der Fertigung – hier lassen sich später eigene Fotos einsetzen.</p>
+    </div>
+    <div class="gallery">
+      <div class="cell"><div class="img-ph">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><circle cx="8.5" cy="9" r="1.6"/><path d="M21 15l-5-4-6 5"/></svg>
+        <span class="lab">Bildplatz 1</span><span class="sub">Maschine / Bearbeitung</span></div></div>
+      <div class="cell"><div class="img-ph">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><circle cx="8.5" cy="9" r="1.6"/><path d="M21 15l-5-4-6 5"/></svg>
+        <span class="lab">Bildplatz 2</span><span class="sub">Team / Kollegen</span></div></div>
+      <div class="cell"><div class="img-ph">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><circle cx="8.5" cy="9" r="1.6"/><path d="M21 15l-5-4-6 5"/></svg>
+        <span class="lab">Bildplatz 3</span><span class="sub">Werkstücke / Detail</span></div></div>
     </div>
   </div>
 </section>
@@ -347,23 +401,23 @@
 <!-- Bewerbungsformular -->
 <section id="bewerben">
   <div class="wrap">
-    <div class="section-head" style="text-align:center;margin:0 auto 2.6rem">
+    <div class="section-head" style="text-align:center;margin:0 auto 2.4rem">
       <div class="kicker">Bewirb Dich jetzt</div>
-      <h2>Dein Weg zu sted</h2>
-      <p style="margin-left:auto;margin-right:auto">Fülle das Formular aus – mit einem Klick öffnet sich Deine vorausgefüllte Bewerbungs-E-Mail. Kein Anschreiben nötig.</p>
+      <h2>Deine Bewerbung</h2>
+      <p style="margin-left:auto;margin-right:auto">Fülle das Formular aus – anschließend öffnet sich Deine vorausgefüllte Bewerbungs-E-Mail an info@stedgmbh.de.</p>
     </div>
 
     <div class="form-shell">
       <aside class="form-aside">
-        <h2>Nur ein paar Angaben – wir melden uns.</h2>
-        <p>So einfach bewirbst Du Dich bei uns:</p>
+        <h2>Ein paar Angaben genügen – wir melden uns.</h2>
+        <p>So läuft Deine Bewerbung ab:</p>
         <div class="steps">
           <div class="step"><span class="n">1</span><div><b>Formular ausfüllen</b><span>Kontaktdaten und ein paar Infos zu Dir.</span></div></div>
-          <div class="step"><span class="n">2</span><div><b>E-Mail absenden</b><span>Lebenslauf &amp; Zeugnisse einfach anhängen.</span></div></div>
+          <div class="step"><span class="n">2</span><div><b>E-Mail absenden</b><span>Lebenslauf und Zeugnisse als Anhang beifügen.</span></div></div>
           <div class="step"><span class="n">3</span><div><b>Kennenlernen</b><span>Wir melden uns zeitnah bei Dir zurück.</span></div></div>
         </div>
         <div class="aside-contact">
-          Fragen vorab? Ruf uns an oder schreib direkt an<br>
+          Fragen vorab? Schreib uns direkt an<br>
           <a href="mailto:info@stedgmbh.de">info@stedgmbh.de</a>
         </div>
       </aside>
@@ -391,43 +445,71 @@
             <div class="field">
               <label for="telefon">Telefon</label>
               <input type="tel" id="telefon" name="telefon" autocomplete="tel">
-              <div class="error-msg">Bitte prüfe Deine Telefonnummer.</div>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="erfahrung">Erfahrung im CNC-Fräsen</label>
+              <select id="erfahrung" name="erfahrung">
+                <option value="">Bitte auswählen …</option>
+                <option>Berufseinsteiger/in</option>
+                <option>Quereinsteiger/in</option>
+                <option>1–3 Jahre</option>
+                <option>3–7 Jahre</option>
+                <option>Über 7 Jahre</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="start">Möglicher Eintrittstermin</label>
+              <input type="text" id="start" name="start" placeholder="z. B. ab sofort / 01.09.2026">
             </div>
           </div>
           <div class="field">
-            <label for="start">Möglicher Eintrittstermin</label>
-            <input type="text" id="start" name="start" placeholder="z. B. ab sofort / 01.09.2026">
-          </div>
-          <div class="field">
-            <label for="erfahrung">Deine Erfahrung im CNC-Fräsen</label>
-            <select id="erfahrung" name="erfahrung">
+            <label for="programmieren">Kannst Du CNC-Programme selbst erstellen/anpassen?</label>
+            <select id="programmieren" name="programmieren">
               <option value="">Bitte auswählen …</option>
-              <option>Auszubildende/r / Berufseinsteiger/in</option>
-              <option>Quereinsteiger/in</option>
-              <option>1–3 Jahre Erfahrung</option>
-              <option>3–7 Jahre Erfahrung</option>
-              <option>Über 7 Jahre Erfahrung</option>
+              <option>Ja, selbstständig</option>
+              <option>Grundkenntnisse</option>
+              <option>Noch nicht</option>
             </select>
           </div>
+
+          <div class="divider"></div>
+          <div class="fieldset-title">Passt das auf Dich zu?</div>
+          <div class="check">
+            <input type="checkbox" id="achsen" name="achsen">
+            <label for="achsen">Ich habe Erfahrung an 3- und/oder 5-Achs-Fräsmaschinen.</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="schicht" name="schicht">
+            <label for="schicht">Ich bin bereit, in Früh- und Spätschicht zu arbeiten.</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="fuehrerschein" name="fuehrerschein">
+            <label for="fuehrerschein">Ich besitze einen Führerschein (Klasse B).</label>
+          </div>
+
+          <div class="divider"></div>
           <div class="field">
             <label for="nachricht">Deine Nachricht</label>
-            <textarea id="nachricht" name="nachricht" placeholder="Erzähl uns kurz etwas über Dich – z. B. bisherige Maschinen/Steuerungen oder warum Du zu sted passt."></textarea>
+            <textarea id="nachricht" name="nachricht" placeholder="Erzähl uns kurz etwas über Dich – z. B. bisherige Maschinen und Steuerungen oder warum Du zu sted passt."></textarea>
           </div>
           <div class="check">
             <input type="checkbox" id="datenschutz" name="datenschutz" required>
-            <label for="datenschutz">Ich habe die Datenschutzhinweise gelesen und bin mit der Verarbeitung meiner Daten zur Bearbeitung meiner Bewerbung einverstanden. <span class="req">*</span></label>
+            <label for="datenschutz">Ich bin mit der Verarbeitung meiner Daten zur Bearbeitung meiner Bewerbung einverstanden. <span class="req">*</span></label>
           </div>
-          <div class="field" id="dsError" style="margin-top:-.6rem;margin-bottom:1rem">
-            <div class="error-msg" style="display:none">Bitte bestätige die Datenschutzhinweise.</div>
+          <div class="field" id="dsError" style="margin-top:.2rem;margin-bottom:1rem">
+            <div class="error-msg" style="display:none">Bitte bestätige die Einwilligung.</div>
           </div>
-          <button type="submit" class="btn btn-primary form-submit">Bewerbung als E-Mail öffnen ✉️</button>
-          <p class="form-note">Es öffnet sich Deine vorausgefüllte E-Mail an <b>info@stedgmbh.de</b>. Denk daran, Lebenslauf und Zeugnisse anzuhängen.</p>
+
+          <button type="submit" class="btn btn-primary form-submit">Bewerbung als E-Mail öffnen</button>
+          <p class="form-note">Es öffnet sich Deine vorausgefüllte E-Mail an <b>info@stedgmbh.de</b>. Bitte hänge Lebenslauf und Zeugnisse an.</p>
         </form>
 
         <div class="success" role="status" aria-live="polite">
-          <div class="badge">✓</div>
-          <h3>Fast geschafft!</h3>
-          <p id="successText">Deine E-Mail wurde geöffnet. Bitte hänge noch Deinen Lebenslauf und Zeugnisse an und schicke sie ab – wir melden uns zeitnah bei Dir.</p>
+          <div class="badge"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+          <h3>Fast geschafft</h3>
+          <p id="successText">Deine E-Mail wurde geöffnet. Bitte hänge noch Lebenslauf und Zeugnisse an und schicke sie ab – wir melden uns zeitnah bei Dir.</p>
           <a class="btn btn-primary" id="reopenMail" href="#">E-Mail erneut öffnen</a>
         </div>
       </div>
@@ -441,7 +523,7 @@
     <div class="foot-grid">
       <div>
         <img src="logo-7.png" alt="sted cnc-fertigung gmbh">
-        <p style="margin-top:1rem;max-width:22rem">sted cnc-fertigung gmbh – Präzision in der Zerspanung. Wir freuen uns auf Deine Bewerbung!</p>
+        <p style="margin-top:1rem;max-width:22rem">sted cnc-fertigung gmbh – Präzision in der Zerspanung. Wir freuen uns auf Deine Bewerbung.</p>
       </div>
       <div>
         <h4>Kontakt</h4>
@@ -470,29 +552,33 @@
     var wrap = field.closest('.field');
     if(wrap) wrap.classList.toggle('invalid', invalid);
   }
-
   function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+  function ja(el){ return el.checked ? 'Ja' : 'Nein'; }
 
-  function buildMailto(data){
-    var subject = 'Bewerbung als CNC-Fräser/in (3/5-Achsen) – ' + data.vorname + ' ' + data.nachname;
+  function buildMailto(d){
+    var subject = 'Bewerbung als CNC-Fräser/in (3/5-Achsen) – ' + d.vorname + ' ' + d.nachname;
     var lines = [
       'Sehr geehrtes sted-Team,',
       '',
       'hiermit bewerbe ich mich als CNC-Fräser/in (3/5-Achsen).',
       '',
-      'Name: ' + data.vorname + ' ' + data.nachname,
-      'E-Mail: ' + data.email,
-      'Telefon: ' + (data.telefon || '-'),
-      'Möglicher Eintrittstermin: ' + (data.start || '-'),
-      'Erfahrung: ' + (data.erfahrung || '-'),
+      'Name: ' + d.vorname + ' ' + d.nachname,
+      'E-Mail: ' + d.email,
+      'Telefon: ' + (d.telefon || '-'),
+      'Erfahrung im CNC-Fräsen: ' + (d.erfahrung || '-'),
+      'Möglicher Eintrittstermin: ' + (d.start || '-'),
+      'CNC-Programmierung: ' + (d.programmieren || '-'),
+      'Erfahrung 3-/5-Achs-Maschinen: ' + d.achsen,
+      'Bereitschaft Früh-/Spätschicht: ' + d.schicht,
+      'Führerschein (Klasse B): ' + d.fuehrerschein,
       '',
       'Nachricht:',
-      (data.nachricht || '-'),
+      (d.nachricht || '-'),
       '',
       '(Lebenslauf und Zeugnisse sind dieser E-Mail beigefügt.)',
       '',
       'Mit freundlichen Grüßen',
-      data.vorname + ' ' + data.nachname
+      d.vorname + ' ' + d.nachname
     ];
     return 'mailto:info@stedgmbh.de?subject=' + encodeURIComponent(subject) +
            '&body=' + encodeURIComponent(lines.join('\r\n'));
@@ -515,32 +601,35 @@
     if(!ds.checked){ dsMsg.style.display='block'; ok=false; } else dsMsg.style.display='none';
 
     if(!ok){
-      var firstBad = document.querySelector('.field.invalid, #dsError .error-msg[style*="block"]');
+      var firstBad = document.querySelector('.field.invalid');
       if(firstBad) firstBad.scrollIntoView({behavior:'smooth', block:'center'});
       return;
     }
 
-    var data = {
+    var d = {
       vorname: vorname.value.trim(),
       nachname: nachname.value.trim(),
       email: email.value.trim(),
       telefon: document.getElementById('telefon').value.trim(),
-      start: document.getElementById('start').value.trim(),
       erfahrung: document.getElementById('erfahrung').value,
+      start: document.getElementById('start').value.trim(),
+      programmieren: document.getElementById('programmieren').value,
+      achsen: ja(document.getElementById('achsen')),
+      schicht: ja(document.getElementById('schicht')),
+      fuehrerschein: ja(document.getElementById('fuehrerschein')),
       nachricht: document.getElementById('nachricht').value.trim()
     };
 
-    lastMailto = buildMailto(data);
+    lastMailto = buildMailto(d);
     document.getElementById('reopenMail').setAttribute('href', lastMailto);
     document.getElementById('successText').textContent =
-      'Danke, ' + data.vorname + '! Deine E-Mail an info@stedgmbh.de wurde geöffnet. Bitte hänge noch Deinen Lebenslauf und Zeugnisse an und schicke sie ab – wir melden uns zeitnah bei Dir.';
+      'Danke, ' + d.vorname + '. Deine E-Mail an info@stedgmbh.de wurde geöffnet. Bitte hänge noch Lebenslauf und Zeugnisse an und schicke sie ab – wir melden uns zeitnah bei Dir.';
 
     window.location.href = lastMailto;
     document.body.classList.add('sent');
     document.getElementById('bewerben').scrollIntoView({behavior:'smooth', block:'start'});
   });
 
-  // live-clear errors while typing
   ['vorname','nachname','email'].forEach(function(id){
     document.getElementById(id).addEventListener('input', function(){ setInvalid(this,false); });
   });
